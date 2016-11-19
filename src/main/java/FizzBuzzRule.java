@@ -4,8 +4,8 @@ public class FizzBuzzRule implements Rule {
     private Rule buzzRule = new BuzzRule();
     private FizzRule fizzRule = new FizzRule();
 
-    public boolean apply(int number) {
-        return buzzRule.apply(number) && fizzRule.apply(number);
+    public boolean check(int number) {
+        return buzzRule.check(number) && fizzRule.check(number);
     }
 
     public String getAnswer() {

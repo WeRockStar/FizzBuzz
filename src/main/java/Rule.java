@@ -1,5 +1,5 @@
 
 public interface Rule {
-    boolean apply(int number);
+    boolean check(int number);
     String getAnswer();
 }

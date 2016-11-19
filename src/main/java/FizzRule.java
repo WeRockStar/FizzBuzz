@@ -2,7 +2,7 @@ public class FizzRule implements Rule {
 
     private final String FIZZ = "Fizz";
 
-    public boolean apply(int number) {
+    public boolean check(int number) {
         return number % 3 == 0;
     }
 
