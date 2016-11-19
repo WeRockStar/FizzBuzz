@@ -6,7 +6,7 @@ public class FizzBuzz {
     public static final String FIZZ_BUZZ = "FizzBuzz";
 
     public String answer(int number) {
-        if (isFizz(number) && isBuzz(number))
+        if (isFizzBuzz(number))
             return FIZZ_BUZZ;
 
         if (isFizz(number)) {
@@ -17,6 +17,10 @@ public class FizzBuzz {
             return BUZZ;
 
         return Integer.toString(number);
+    }
+
+    private boolean isFizzBuzz(int number) {
+        return isFizz(number) && isBuzz(number);
     }
 
     private boolean isBuzz(int number) {
