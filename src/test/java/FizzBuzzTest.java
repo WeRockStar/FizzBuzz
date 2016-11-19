@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 public class FizzBuzzTest {
 
     private FizzBuzz fizzBuzz;
-    private BuzzRule buzzRule;
+    private Rule buzzRule;
     private FizzBuzzRule fizzBuzzRule;
     private FizzRule fizzRule;
 
@@ -33,13 +33,13 @@ public class FizzBuzzTest {
     @Test
     public void answer_given_3_return_Fizz() throws Exception {
         String actual = fizzBuzz.answer(3);
-        assertEquals(fizzRule.getFizz(), actual);
+        assertEquals(fizzRule.getAnswer(), actual);
     }
 
     @Test
     public void answer_given_9_return_Fizz() throws Exception {
         String actual = fizzBuzz.answer(9);
-        assertEquals(fizzRule.getFizz(), actual);
+        assertEquals(fizzRule.getAnswer(), actual);
     }
 
     @Test
@@ -57,12 +57,12 @@ public class FizzBuzzTest {
     @Test
     public void answer_given_15_return_fizz_buzz() throws Exception {
         String actual = fizzBuzz.answer(15);
-        assertEquals(fizzBuzzRule.getFizzBuzz(), actual);
+        assertEquals(fizzBuzzRule.getAnswer(), actual);
     }
 
     @Test
     public void answer_given_30_return_fizz_buzz() throws Exception {
         String actual = fizzBuzz.answer(30);
-        assertEquals(fizzBuzzRule.getFizzBuzz(), actual);
+        assertEquals(fizzBuzzRule.getAnswer(), actual);
     }
 }

@@ -1,13 +1,14 @@
-public class FizzBuzzRule {
+public class FizzBuzzRule implements Rule {
+
     private final String FIZZ_BUZZ = "FizzBuzz";
-    private BuzzRule buzzRule = new BuzzRule();
+    private Rule buzzRule = new BuzzRule();
     private FizzRule fizzRule = new FizzRule();
 
-    public boolean isFizzBuzz(int number) {
-        return buzzRule.isBuzz(number) && fizzRule.isFizz(number);
+    public boolean apply(int number) {
+        return buzzRule.apply(number) && fizzRule.apply(number);
     }
 
-    public String getFizzBuzz() {
+    public String getAnswer() {
         return FIZZ_BUZZ;
     }
 }

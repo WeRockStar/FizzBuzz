@@ -1,11 +1,12 @@
-public class FizzRule {
+public class FizzRule implements Rule {
+
     private final String FIZZ = "Fizz";
 
-    public boolean isFizz(int number) {
+    public boolean apply(int number) {
         return number % 3 == 0;
     }
 
-    public String getFizz() {
+    public String getAnswer() {
         return FIZZ;
     }
 }
