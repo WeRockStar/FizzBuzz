@@ -10,9 +10,9 @@ public class FizzBuzz {
         rules.add(new FizzRule());
         rules.add(new BuzzRule());
 
-        for(int rule = 0;rule < rules.size();rule++) {
-            if (rules.get(rule).check(number))
-                return rules.get(rule).getAnswer();
+        for (Rule rule : rules) {
+            if (rule.check(number))
+                return rule.getAnswer();
         }
         return Integer.toString(number);
     }
