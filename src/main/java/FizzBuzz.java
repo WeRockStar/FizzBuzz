@@ -6,14 +6,14 @@ public class FizzBuzz {
         FizzRule fizzRule = new FizzRule();
         FizzBuzzRule fizzBuzzRule = new FizzBuzzRule();
 
-        if (FizzBuzzRule.isFizzBuzz(number))
+        if (fizzBuzzRule.isFizzBuzz(number))
             return fizzBuzzRule.getFizzBuzz();
 
-        if (FizzRule.isFizz(number)) {
+        if (fizzRule.isFizz(number)) {
             return fizzRule.getFizz();
         }
 
-        if (BuzzRule.isBuzz(number))
+        if (buzzRule.isBuzz(number))
             return buzzRule.getAnswer();
 
         return Integer.toString(number);

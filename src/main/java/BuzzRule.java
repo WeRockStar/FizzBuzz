@@ -3,7 +3,7 @@ public class BuzzRule {
 
     private final String answer = "Buzz";
 
-    public static boolean isBuzz(int number) {
+    public boolean isBuzz(int number) {
         return number % 5 == 0;
     }
 
