@@ -6,10 +6,10 @@ public class FizzBuzz {
     public static final String FIZZ_BUZZ = "FizzBuzz";
 
     public String answer(int number) {
-        if (number % 15 == 0)
+        if (isFizz(number) && number % 5 == 0)
             return FIZZ_BUZZ;
 
-        if (number % 3 == 0) {
+        if (isFizz(number)) {
             return FIZZ;
         }
 
@@ -17,5 +17,9 @@ public class FizzBuzz {
             return BUZZ;
 
         return Integer.toString(number);
+    }
+
+    private boolean isFizz(int number) {
+        return number % 3 == 0;
     }
 }
