@@ -7,7 +7,7 @@ public class FizzBuzz {
 
     public String answer(int number) {
         if (number % 15 == 0)
-            return FizzBuzz.FIZZ_BUZZ;
+            return FIZZ_BUZZ;
 
         if (number % 3 == 0) {
             return FIZZ;
