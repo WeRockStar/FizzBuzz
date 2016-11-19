@@ -1,33 +1,21 @@
 
 public class FizzBuzz {
-
-    public static final String FIZZ = "Fizz";
-    public static final String BUZZ = "Buzz";
-    public static final String FIZZ_BUZZ = "FizzBuzz";
-
     public String answer(int number) {
-        if (isFizzBuzz(number))
-            return FIZZ_BUZZ;
 
-        if (isFizz(number)) {
-            return FIZZ;
+        BuzzRule buzzRule = new BuzzRule();
+        FizzRule fizzRule = new FizzRule();
+        FizzBuzzRule fizzBuzzRule = new FizzBuzzRule();
+
+        if (FizzBuzzRule.isFizzBuzz(number))
+            return fizzBuzzRule.getFizzBuzz();
+
+        if (FizzRule.isFizz(number)) {
+            return fizzRule.getFizz();
         }
 
-        if (isBuzz(number))
-            return BUZZ;
+        if (BuzzRule.isBuzz(number))
+            return buzzRule.getAnswer();
 
         return Integer.toString(number);
-    }
-
-    private boolean isFizzBuzz(int number) {
-        return isFizz(number) && isBuzz(number);
-    }
-
-    private boolean isBuzz(int number) {
-        return number % 5 == 0;
-    }
-
-    private boolean isFizz(int number) {
-        return number % 3 == 0;
     }
 }

@@ -6,10 +6,16 @@ import static org.junit.Assert.*;
 public class FizzBuzzTest {
 
     private FizzBuzz fizzBuzz;
+    private BuzzRule buzzRule;
+    private FizzBuzzRule fizzBuzzRule;
+    private FizzRule fizzRule;
 
     @Before
     public void setUp() throws Exception {
         fizzBuzz = new FizzBuzz();
+        buzzRule = new BuzzRule();
+        fizzRule = new FizzRule();
+        fizzBuzzRule = new FizzBuzzRule();
     }
 
     @Test
@@ -27,36 +33,36 @@ public class FizzBuzzTest {
     @Test
     public void answer_given_3_return_Fizz() throws Exception {
         String actual = fizzBuzz.answer(3);
-        assertEquals(FizzBuzz.FIZZ, actual);
+        assertEquals(fizzRule.getFizz(), actual);
     }
 
     @Test
     public void answer_given_9_return_Fizz() throws Exception {
         String actual = fizzBuzz.answer(9);
-        assertEquals(FizzBuzz.FIZZ, actual);
+        assertEquals(fizzRule.getFizz(), actual);
     }
 
     @Test
     public void answer_given_5_return_buzz() throws Exception {
         String actual = fizzBuzz.answer(5);
-        assertEquals(FizzBuzz.BUZZ, actual);
+        assertEquals(buzzRule.getAnswer(), actual);
     }
 
     @Test
     public void answer_given_10_return_buzz() throws Exception {
         String actual = fizzBuzz.answer(10);
-        assertEquals(FizzBuzz.BUZZ, actual);
+        assertEquals(buzzRule.getAnswer(), actual);
     }
 
     @Test
     public void answer_given_15_return_fizz_buzz() throws Exception {
         String actual = fizzBuzz.answer(15);
-        assertEquals(FizzBuzz.FIZZ_BUZZ, actual);
+        assertEquals(fizzBuzzRule.getFizzBuzz(), actual);
     }
 
     @Test
     public void answer_given_30_return_fizz_buzz() throws Exception {
         String actual = fizzBuzz.answer(30);
-        assertEquals(FizzBuzz.FIZZ_BUZZ, actual);
+        assertEquals(fizzBuzzRule.getFizzBuzz(), actual);
     }
 }
