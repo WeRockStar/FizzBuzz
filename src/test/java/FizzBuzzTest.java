@@ -48,5 +48,15 @@ public class FizzBuzzTest {
         assertEquals(FizzBuzz.BUZZ, actual);
     }
 
+    @Test
+    public void answer_given_15_return_fizz_buzz() throws Exception {
+        String actual = fizzBuzz.answer(15);
+        assertEquals("FizzBuzz", actual);
+    }
 
+    @Test
+    public void answer_given_30_return_fizz_buzz() throws Exception {
+        String actual = fizzBuzz.answer(30);
+        assertEquals("FizzBuzz", actual);
+    }
 }
